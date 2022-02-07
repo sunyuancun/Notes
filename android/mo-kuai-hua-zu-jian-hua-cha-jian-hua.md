@@ -71,7 +71,29 @@ PathClassLoader：只能加载已经安装到 Android 系统中的 APK 文件。
 2. Android 生命周期的管理和组件的注册
 3. 宿主 APK 和插件 APK 资源引用的冲突解决
 
+#### 框架一： **DL 动态加载框架**
 
+{% embed url="https://blog.csdn.net/singwhatiwanna/article/details/39937639" %}
+
+#### [https://github.com/singwhatiwanna/dynamic-load-apk](mo-kuai-hua-zu-jian-hua-cha-jian-hua.md#kuang-jia-yi-dl-dong-tai-jia-zai-kuang-jia)
+
+####
+
+基于<mark style="color:blue;">代理的方式</mark>实现插件框架，对 App 的表层做了处理，<mark style="color:red;">通过在 Manifest 中注册代理组件，当启动插件组件时，首先启动一个代理组件，然后通过这个代理组件来构建，启动插件组件</mark>。 需要按照一定的规则来开发插件 APK，<mark style="color:blue;">插件中的组件需要实现经过改造后的 Activity、FragmentActivity、Service 等的子类。</mark>&#x20;
+
+<mark style="color:red;">优点</mark>：
+
+插件需要<mark style="color:blue;">遵循一定的规则，因此安全方面可控制</mark>。 方案简单，适用于自身少量代码的插件化改造。&#x20;
+
+<mark style="color:red;">缺点</mark>：
+
+<mark style="color:red;">不支持通过 This 调用组件的方法，需要通过 that 去调用</mark>。 由于 APK 中<mark style="color:red;">的 Activity 没有注册，不支持隐式调用 APK 内部的 Activity</mark>。 插件编写和改造过程中，需要考虑兼容性问题比较多，联调起来会比较费时费力。
+
+
+
+
+
+****
 
 <mark style="color:red;"></mark>
 
