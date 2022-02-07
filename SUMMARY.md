@@ -11,3 +11,4 @@
 * [Handler](android/handler.md)
 * [View](android/view.md)
 * [插件化](android/cha-jian-hua.md)
+* [组件化](android/zu-jian-hua.md)
