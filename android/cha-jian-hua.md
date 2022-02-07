@@ -77,9 +77,9 @@
 
 
 
+### 框架二：[VirtualAPK](https://links.jianshu.com/go?to=https%3A%2F%2Fgithub.com%2Fdidi%2FVirtualAPK)
 
-
-****
+****[**https://github.com/didi/VirtualAPK**](https://github.com/didi/VirtualAPK)****
 
 <mark style="color:red;"></mark>
 
