@@ -10,4 +10,4 @@
 * [Fragment](android/fragment.md)
 * [Handler](android/handler.md)
 * [View](android/view.md)
-* [模块化&组件化&插件化](android/mo-kuai-hua-zu-jian-hua-cha-jian-hua.md)
+* [插件化](android/cha-jian-hua.md)

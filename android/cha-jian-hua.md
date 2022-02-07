@@ -1,32 +1,6 @@
-# 模块化&组件化&插件化
+# 插件化
 
-### 模块化
-
-#### 什么是模块化
-
-
-
-### **组件化**
-
-#### 什么是组件化
-
-组件化是将一个<mark style="color:orange;">app分成多个模块，每个模块都是一个组件(module)</mark>，开发的过程中我们<mark style="color:orange;">可以让这些组件相互依赖或者单独调试部分组件</mark>，但是<mark style="color:green;">最终发布的时候将这些组件合并成一个统一的apk</mark>，这就是组件化开发。
-
-#### 组件化优点和方案
-
-#### 组件如何独立调试
-
-#### 组件间通信
-
-#### ARouter原理
-
-#### Aplication动态加载
-
-
-
-## 插件化
-
-### 插件化的定义
+插件化的定义
 
 插件化开发就是将整个app拆分成很多模块，<mark style="color:orange;">每个模块都是一个apk</mark>(组件化的每个模块是一个lib),最<mark style="color:orange;">终打包的时候将宿主apk和插件apk分开打包，插件apk通过动态下发到宿主apk</mark>，这就是插件化。
 
@@ -73,7 +47,7 @@
 
 {% embed url="https://blog.csdn.net/singwhatiwanna/article/details/39937639" %}
 
-#### [https://github.com/singwhatiwanna/dynamic-load-apk](mo-kuai-hua-zu-jian-hua-cha-jian-hua.md#kuang-jia-yi-dl-dong-tai-jia-zai-kuang-jia)
+#### [https://github.com/singwhatiwanna/dynamic-load-apk](cha-jian-hua.md#kuang-jia-yi-dl-dong-tai-jia-zai-kuang-jia)
 
 
 
@@ -83,15 +57,15 @@
 
 #### 资源管理
 
+![](<../.gitbook/assets/微信截图\_1 (1).png>)
 
+![](../.gitbook/assets/微信截图\_2.png)
 
-
-
-
+![](../.gitbook/assets/微信截图\_3.png)
 
 #### Activity生命周期管理
 
-
+![](../.gitbook/assets/微信截图\_20220207155447.png)
 
 #### <mark style="color:red;">优点</mark>：
 
