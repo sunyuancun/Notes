@@ -49,11 +49,9 @@
 
 #### [https://github.com/singwhatiwanna/dynamic-load-apk](cha-jian-hua.md#kuang-jia-yi-dl-dong-tai-jia-zai-kuang-jia)
 
-
+#### DL框架原理
 
 基于<mark style="color:blue;">代理的方式</mark>实现插件框架，对 App 的表层做了处理，<mark style="color:red;">通过在 Manifest 中注册代理组件，当启动插件组件时，首先启动一个代理组件，然后通过这个代理组件来构建，启动插件组件</mark>。 需要按照一定的规则来开发插件 APK，<mark style="color:blue;">插件中的组件需要实现经过改造后的 Activity、FragmentActivity、Service 等的子类。</mark>&#x20;
-
-#### DL框架原理
 
 #### 资源管理
 
@@ -79,9 +77,21 @@
 
 ### 框架二：[VirtualAPK](https://links.jianshu.com/go?to=https%3A%2F%2Fgithub.com%2Fdidi%2FVirtualAPK)
 
+VirtualAPK 是滴滴开源的一套插件化框架，支持几乎所有的 Android 特性，四大组件方面。
+
+![](../.gitbook/assets/apk.png)
+
 ****[**https://github.com/didi/VirtualAPK**](https://github.com/didi/VirtualAPK)****
 
-<mark style="color:red;"></mark>
+#### VirtualAPK框架原理
+
+<mark style="color:red;">VirtualAPK 对插件没有额外的约束</mark>，原生的 apk 即可作为插件。插件工程编译生成 apk后，即可通过宿主 App 加载，<mark style="color:red;">每个插件 apk 被加载后，都会在宿主中创建一个单独的</mark> <mark style="color:green;">LoadedPlugin</mark> <mark style="color:red;">对象</mark>。如下图所示，通过这些 LoadedPlugin 对象，VirtualAPK 就可以管理插件并赋予插件新的意义，使其可以像手机中安装过的 App 一样运行。
+
+* 合并宿主和插件的ClassLoader 需要注意的是，插件中的类不可以和宿主重复&#x20;
+* 合并插件和宿主的资源 重设插件资源的 packageId，将插件资源和宿主资源合并&#x20;
+* 去除插件包对宿主的引用 构建时通过 Gradle 插件去除插件对宿主的代码以及资源的引用
+
+![](../.gitbook/assets/微信截图\_20220210151817.png)
 
 <mark style="color:red;"></mark>
 
