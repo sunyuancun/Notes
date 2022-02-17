@@ -93,9 +93,11 @@ VirtualAPK 是滴滴开源的一套插件化框架，支持几乎所有的 Andro
 
 ![](../.gitbook/assets/微信截图\_20220210151817.png)
 
-<mark style="color:red;"></mark>
+#### 特性
 
-<mark style="color:red;"></mark>
+![](../.gitbook/assets/微信截图\_20220214100504.png)
+
+![](../.gitbook/assets/微信截图\_20220214100533.png)
 
 
 
